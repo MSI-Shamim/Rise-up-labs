@@ -20,15 +20,15 @@
 
   What can I do more with this app?
 1. Image upload for Profile pic with less size & best quality
-2. Show the history of previous users those were logged in before
+2. Show the history of previous users that were logged in before
 3. Set anything dynamically through settings menu (like: Dark mode, color change, etc.)
 4. Make search history so that user can see previous search words
 5. Add recommended words at home page so that user can see movies from their best interests
 6. OTP system for phone auth/email auth
 7. More interactive UI
 
-Note: all the screenshots are available on '/screenshots' folder.
+Note: all the screenshots are available in the '/screenshots' folder.
 
-Thanks You so much.
+Thank You so much.
 MSI Shamim.
 msi.shamim2427@gmail.com
