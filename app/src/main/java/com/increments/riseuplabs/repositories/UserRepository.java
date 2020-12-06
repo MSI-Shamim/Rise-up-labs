@@ -1,4 +1,4 @@
-package com.increments.riseuplabs.ripositories;
+package com.increments.riseuplabs.repositories;
 
 import android.app.Application;
 import android.os.AsyncTask;

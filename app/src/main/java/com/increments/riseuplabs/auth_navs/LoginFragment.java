@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
@@ -25,6 +26,7 @@ import com.increments.riseuplabs.MainActivity;
 import com.increments.riseuplabs.R;
 import com.increments.riseuplabs.databinding.FragmentLoginBinding;
 import com.increments.riseuplabs.models.User;
+import com.increments.riseuplabs.utils.RiseupDialog;
 import com.increments.riseuplabs.viewmodels.UserViewModel;
 
 import java.util.List;
@@ -119,26 +121,33 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             return;
         }
 
-        mViewModel.getUserLiveData().observe(requireActivity(), new Observer<List<User>>() {
+        RiseupDialog dialog = new RiseupDialog(requireContext());
+        dialog.showLoginDialog();
+
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onChanged(List<User> users) {
-                if (!users.isEmpty()) {
-                    for (User user : users) {
-                        if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-                            SharedPreferences.Editor editor = mSharedPreferences.edit();
-                            editor.putString(S_NAME, user.getName());
-                            editor.putString(S_USERNAME, user.getUsername());
-                            editor.putString(S_PHONE, user.getPhone());
-                            editor.putString(S_PASSWORD, user.getPassword());
-                            editor.putString(S_DATE, user.getDate());
-                            editor.apply();
-                            startDashboard();
+            public void run() {
+                mViewModel.getUserLiveData().observe(requireActivity(), new Observer<List<User>>() {
+                    @Override
+                    public void onChanged(List<User> users) {
+                        if (!users.isEmpty()) {
+                            for (User user : users) {
+                                if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                                    SharedPreferences.Editor editor = mSharedPreferences.edit();
+                                    editor.putString(S_NAME, user.getName());
+                                    editor.putString(S_USERNAME, user.getUsername());
+                                    editor.putString(S_PHONE, user.getPhone());
+                                    editor.putString(S_PASSWORD, user.getPassword());
+                                    editor.putString(S_DATE, user.getDate());
+                                    editor.apply();
+                                    startDashboard();
+                                }
+                            }
                         }
                     }
-
-                }
+                });
             }
-        });
+        }, 1000);
     }
 
     private void startDashboard() {

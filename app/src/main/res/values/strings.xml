@@ -34,4 +34,8 @@
     <string name="alert_logout">Are your sure to logout?</string>
     <string name="cancel">CANCEL</string>
     <string name="logout">LOGOUT</string>
+    <string name="str_authenticating">Authenticating...</string>
+    <string name="str_loading">Please wait...</string>
+    <string name="str_failed">Login Failed!</string>
+    <string name="str_succeeded">Login succeeded!</string>
 </resources>

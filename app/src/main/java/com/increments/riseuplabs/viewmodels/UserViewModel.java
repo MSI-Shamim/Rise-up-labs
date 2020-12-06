@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.increments.riseuplabs.models.User;
-import com.increments.riseuplabs.ripositories.UserRepository;
+import com.increments.riseuplabs.repositories.UserRepository;
 
 import java.util.List;
 
