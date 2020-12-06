@@ -1,4 +1,4 @@
-package com.increments.riseuplabs.database;
+package com.increments.riseuplabs.skeletons;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -34,7 +34,7 @@ public abstract class UserDatabase extends RoomDatabase {
         return instance;
     }
 
-    private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback(){
+    private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
@@ -42,10 +42,10 @@ public abstract class UserDatabase extends RoomDatabase {
         }
     };
 
-    private static class PopulateDbAsync extends AsyncTask<Void, Void, Void>{
+    private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
         private UserDao mUserDao;
 
-        private PopulateDbAsync(UserDatabase userDatabase){
+        private PopulateDbAsync(UserDatabase userDatabase) {
             mUserDao = userDatabase.mUserDao();
         }
 

@@ -15,10 +15,10 @@ public class SplashScreen extends AppCompatActivity {
         View splashScreen = new EasySplashScreen(this)
                 .withFullScreen()
                 .withTargetActivity(AuthenticationActivity.class)
-                .withSplashTimeOut(3000)
                 .withFooterText(getString(R.string.copy_right))
                 .withLogo(R.drawable.riseuplabs)
                 .withAfterLogoText(getString(R.string.tag_line))
+                .withSplashTimeOut(1000)
                 .create();
         setContentView(splashScreen);
     }

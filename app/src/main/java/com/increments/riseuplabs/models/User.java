@@ -1,11 +1,13 @@
 package com.increments.riseuplabs.models;
 
+import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static com.increments.riseuplabs.utils.Constants.TABLE_NAME;
@@ -28,7 +30,18 @@ public class User implements Parcelable {
         this.username = username;
         this.password = password;
         this.phone = phone;
-        this.date = new Date().toString();
+
+        @SuppressLint("SimpleDateFormat")
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM, yyyy");
+        this.date = dateFormat.format(new Date());
+    }
+
+    public User(String name, String username, String password, String phone, String date) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.phone = phone;
+        this.date = date;
     }
 
     protected User(Parcel in) {

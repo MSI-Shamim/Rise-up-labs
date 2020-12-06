@@ -35,7 +35,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/username_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -45,12 +46,14 @@
             android:layout_height="match_parent"
             android:layout_margin="@dimen/_8dp"
             android:hint="@string/hint_password"
+            app:endIconMode="password_toggle"
             app:startIconDrawable="@drawable/ic_outline_lock_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:imeOptions="actionGo"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 

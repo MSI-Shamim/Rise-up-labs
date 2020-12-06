@@ -4,10 +4,9 @@ import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 
 import com.increments.riseuplabs.daos.UserDao;
-import com.increments.riseuplabs.database.UserDatabase;
+import com.increments.riseuplabs.skeletons.UserDatabase;
 import com.increments.riseuplabs.models.User;
 
 import java.util.List;

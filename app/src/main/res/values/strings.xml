@@ -3,13 +3,6 @@
     <string name="copy_right">Copyright 2020</string>
     <string name="tag_line">Diving into Technology</string>
     <string name="title_activity_authentication">AuthenticationActivity</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hint_user_name">Username</string>
     <string name="hint_password">Password</string>
     <string name="btn_login">Login</string>
@@ -17,4 +10,28 @@
     <string name="btn_register">Register</string>
     <string name="hint_name">Name</string>
     <string name="hint_phone">Phone</string>
+    <string name="str_web_channel">&lt;b>Web channel:&lt;/b> %s</string>
+    <string name="str_network">&lt;b>Network:&lt;/b> %s</string>
+    <string name="str_network_web_channel">&lt;b>Network/Web Channel:&lt;/b> %s</string>
+    <string name="str_schedule">&lt;b>Schedule:&lt;/b> %s</string>
+    <string name="str_status">&lt;b>Status:&lt;/b> %s</string>
+    <string name="str_show_type">&lt;b>Show type:&lt;/b> %s</string>
+    <string name="str_genres">&lt;b>Genres:&lt;/b> %s</string>
+    <string name="str_episodes_ordered">&lt;b>Episodes ordered:&lt;/b> %s</string>
+    <string name="str_official_site">&lt;b>Official site:&lt;/b> %s</string>
+    <string name="str_rating">&lt;b>Rating:&lt;/b> %s</string>
+    <string name="item_home">Home</string>
+    <string name="item_profile">Profile</string>
+    <string name="item_search">Search</string>
+    <string name="str_name">&lt;b>Name:&lt;/b> %s</string>
+    <string name="str_phone">&lt;b>Phone:&lt;/b> %s</string>
+    <string name="str_username">&lt;b>Username:&lt;/b> %s</string>
+    <string name="str_password">&lt;b>Password:&lt;/b> %s</string>
+    <string name="str_date">&lt;b>Created at:&lt;/b> %s</string>
+    <string name="hint_query">Search movie here…</string>
+    <string name="str_no_result">No result found!</string>
+    <string name="single_query">singlesearch/shows?q=%s</string>
+    <string name="alert_logout">Are your sure to logout?</string>
+    <string name="cancel">CANCEL</string>
+    <string name="logout">LOGOUT</string>
 </resources>
